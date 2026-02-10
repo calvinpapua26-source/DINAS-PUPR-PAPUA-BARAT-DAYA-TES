@@ -1,0 +1,9 @@
+{"type":"FeatureCollection", "features": [
+{"type":"Feature","geometry":{"type":"Point","coordinates":[131.28082843459532,-1.1302328694641515,0,-1.7976931348623157e+308]},"properties":{"Nama_DI":"DI Majaran","Bendung":"Bendung Majaran","x":"753817,496471925","y":"9874975,4556927"}},
+{"type":"Feature","geometry":{"type":"Point","coordinates":[131.24533319136637,-1.1572185412262583,0,-1.7976931348623157e+308]},"properties":{"Nama_DI":"DI Majener","Bendung":"Majener","x":"749863,090861009","y":"9871993,49147831"}},
+{"type":"Feature","geometry":{"type":"Point","coordinates":[131.25299736069618,-1.20125409840502,0,-1.7976931348623157e+308]},"properties":{"Nama_DI":"DI Matawolot","Bendung":"Matawolot  1","x":"750712,465518529","y":"9867121,75415034"}},
+{"type":"Feature","geometry":{"type":"Point","coordinates":[131.23996663461853,-1.1961849668636977,0,-1.7976931348623157e+308]},"properties":{"Nama_DI":"DI Matawolot","Bendung":"Matawolot  2","x":"749262,125780428","y":"9867683,67206864"}},
+{"type":"Feature","geometry":{"type":"Point","coordinates":[131.29316077214858,-1.0422500066677471,0,-1.7976931348623157e+308]},"properties":{"Nama_DI":"DI Makbusun","Bendung":"Makbusun 1","x":"755198,000412153","y":"9884707,00000121"}},
+{"type":"Feature","geometry":{"type":"Point","coordinates":[131.29967358505723,-1.0244241764203492,0,-1.7976931348623157e+308]},"properties":{"Nama_DI":"DI Makbusun","Bendung":"Makbusun 2","x":"755924,608365823","y":"9886678,36508223"}},
+{"type":"Feature","geometry":{"type":"Point","coordinates":[131.34286945987756,-1.023772073039393,0,-1.7976931348623157e+308]},"properties":{"Nama_DI":"DI Mariyat","Bendung":"Bendung Mariyat","x":"760734,488362003","y":"9886747,01714316"}}
+]}

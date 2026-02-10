@@ -1,0 +1,8 @@
+
+{
+  "name": "Dinas PUPR Papua Barat Daya",
+  "description": "Website resmi Dinas Pekerjaan Umum dan Penataan Ruang Provinsi Papua Barat Daya. Memberikan informasi terkini mengenai infrastruktur, tata ruang, dan layanan publik.",
+  "requestFramePermissions": [
+    "geolocation"
+  ]
+}

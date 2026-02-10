@@ -1,0 +1,6 @@
+{"type":"FeatureCollection", "features": [
+{"type":"Feature","geometry":{"type":"Point","coordinates":[131.33422500000006,-0.8758499999999572,0,-1.7976931348623157e+308]},"properties":{"NAME":"Kali KM 10 Kota Sorong","x":"131° 20' 3,210\" E","y":"0° 52' 33,060\" S","Lokasi":"Kota Sorong"}},
+{"type":"Feature","geometry":{"type":"Point","coordinates":[132.04191388900006,-1.4694138889999522,0,-1.7976931348623157e+308]},"properties":{"NAME":"Sungai Komawlin (Sorong Selatan)","x":"132° 2' 30,890\" E","y":"1° 28' 9,890\" S","Lokasi":"Sorong Selatan"}},
+{"type":"Feature","geometry":{"type":"Point","coordinates":[131.30729695200012,-0.8923681839999631,0,-1.7976931348623157e+308]},"properties":{"NAME":"Sungai Melati KM 9.5 Kota Sorong","x":"131° 18' 26,269\" E","y":"0° 53' 32,525\" S","Lokasi":"Kota Sorong"}},
+{"type":"Feature","geometry":{"type":"Point","coordinates":[130.76032694200012,-0.9342362219999245,0,-1.7976931348623157e+308]},"properties":{"NAME":"Sungai Waibon, Raja Ampat","x":"130° 45' 37,177\" E","y":"0° 56' 3,250\" S","Lokasi":"Raja Ampat"}}
+]}

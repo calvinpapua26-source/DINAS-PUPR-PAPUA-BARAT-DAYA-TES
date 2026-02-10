@@ -1,0 +1,4 @@
+{"type":"FeatureCollection", "features": [
+{"type":"Feature","geometry":{"type":"Point","coordinates":[131.41549999992515,-1.042999999650192,0,-1.7976931348623157e+308]},"properties":{"namobj":"TPA Makbon","thnpbn":2014,"propinsi":"Papua Barat","kab_kota":"Sorong","ckplyn":7593,"kaptpa":67608.95,"artpa":10,"jnssmp":1,"stspng":"Pembangunan","koord_x":131.4155,"koord_y":-1.043,"srs_id":"4326","remark":"Pembangunan TPA Kabupaten Sorong","metadata":"TempatPembuanganAkhir.xls","fcode":"HE01050300"}},
+{"type":"Feature","geometry":{"type":"Point","coordinates":[132.1117059998321,-1.5153370000024893,0,-1.7976931348623157e+308]},"properties":{"namobj":"TPA Hasmoh","thnpbn":2015,"propinsi":"Papua Barat","kab_kota":"Sorong Selatan","ckplyn":4500,"kaptpa":9741.85,"artpa":6,"jnssmp":1,"stspng":"Pembangunan","koord_x":132.111706,"koord_y":-1.515337,"srs_id":"4326","remark":"Pembangunan TPA Kabupaten Sorong Selatan","metadata":"TempatPembuanganAkhir.xls","fcode":"HE01050300"}}
+]}
