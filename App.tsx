@@ -11,6 +11,7 @@ import InfoTataRuang from './components/InfoTataRuang';
 import AksesJalan from './components/AksesJalan';
 import DataSpasial from './components/DataSpasial';
 import SPM from './components/SPM';
+import PertekAir from './components/PertekAir';
 import { MOCK_NEWS } from './constants';
 
 const HomePage: React.FC = () => (
@@ -22,6 +23,7 @@ const HomePage: React.FC = () => (
       <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-8">
         {[
           { title: 'Izin Bangunan (PBG)', icon: 'fa-building', color: 'bg-white text-blue-900', path: '/' },
+          { title: 'Pertek Air Permukaan', icon: 'fa-water', color: 'bg-white text-blue-900', path: '/pertek-air' },
           { title: 'Info Tata Ruang', icon: 'fa-map-marked-alt', color: 'bg-white text-blue-900', path: '/info-tata-ruang' },
           { title: 'Akses Jalan', icon: 'fa-road', color: 'bg-white text-blue-900', path: '/akses-jalan' },
           { title: 'Data Spasial', icon: 'fa-database', color: 'bg-blue-900 text-white', path: '/data-spasial' },
@@ -180,6 +182,7 @@ const App: React.FC = () => {
           <Route path="/info-tata-ruang" element={<InfoTataRuang />} />
           <Route path="/akses-jalan" element={<AksesJalan />} />
           <Route path="/data-spasial" element={<DataSpasial />} />
+          <Route path="/pertek-air" element={<PertekAir />} />
           <Route path="/spm" element={<SPM />} />
           <Route path="*" element={<Navigate to="/" replace />} />
         </Routes>
