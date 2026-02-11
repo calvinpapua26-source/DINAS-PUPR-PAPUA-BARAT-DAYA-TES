@@ -103,7 +103,7 @@ const GeminiChat: React.FC = () => {
     }
 
     if (!aiResponse || aiResponse.includes('gangguan pada sistem')) {
-      setMessages(prev => [...prev, { role: 'ai', text: 'Maaf Bapa/Mama, Asisten sedang ada gangguan koneksi. \n\nMohon pastikan Kakak sudah mengatur API Key di file .env (VITE_API_KEY) atau coba lagi sebentar ya.' }]);
+      setMessages(prev => [...prev, { role: 'ai', text: 'Maaf Bapa/Mama, Asisten sedang ada gangguan koneksi. \n\nMohon pastikan Kakak sudah mengatur API Key di file .env (VITE_GEMINI_API_KEY) atau coba lagi sebentar ya.' }]);
     } else {
       setMessages(prev => [...prev, { role: 'ai', text: aiResponse }]);
     }

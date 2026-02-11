@@ -1,4 +1,5 @@
 
+/// <reference types="vite/client" />
 import { GoogleGenAI } from "@google/genai";
 
 const SYSTEM_INSTRUCTION = `
@@ -27,7 +28,7 @@ Mengumpulkan data pengaduan jalan rusak secara akurat, melakukan verifikasi inst
 `;
 
 // Gunakan import.meta.env untuk Vite
-const API_KEY = import.meta.env.VITE_API_KEY || '';
+const API_KEY = import.meta.env.VITE_GEMINI_API_KEY || '';
 const genAI = new GoogleGenAI({ apiKey: API_KEY });
 
 export async function chatWithGemini(userMessage: string, history: any[] = []) {
