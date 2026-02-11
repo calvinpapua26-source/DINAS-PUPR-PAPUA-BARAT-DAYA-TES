@@ -28,12 +28,22 @@ Mengumpulkan data pengaduan jalan rusak secara akurat, melakukan verifikasi inst
 `;
 
 // Gunakan import.meta.env untuk Vite
-const API_KEY = import.meta.env.VITE_GEMINI_API_KEY || '';
-const genAI = new GoogleGenAI({ apiKey: API_KEY });
+// Initialize lazily to prevent top-level crashes if API_KEY is invalid or missing
+let genAI: any = null;
+function getGenAI() {
+  const API_KEY = import.meta.env.VITE_GEMINI_API_KEY || '';
+  if (!genAI && API_KEY) {
+    genAI = new GoogleGenAI({ apiKey: API_KEY });
+  }
+  return genAI;
+}
 
 export async function chatWithGemini(userMessage: string, history: any[] = []) {
   try {
-    const model = genAI.getGenerativeModel({
+    const ai = getGenAI();
+    if (!ai) throw new Error("Gemini API Key is missing");
+
+    const model = ai.getGenerativeModel({
       model: 'gemini-1.5-flash',
       systemInstruction: SYSTEM_INSTRUCTION,
     });
@@ -59,7 +69,10 @@ export async function chatWithGemini(userMessage: string, history: any[] = []) {
 
 export async function analyzeRoadImage(imageBuffer: string) {
   try {
-    const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash" });
+    const ai = getGenAI();
+    if (!ai) throw new Error("Gemini API Key is missing");
+
+    const model = ai.getGenerativeModel({ model: "gemini-1.5-flash" });
     const prompt = "Analisis foto ini. Apakah ini menunjukkan jalan rusak, lubang di jalan, atau infrastruktur jalan yang bermasalah? Jawab hanya dengan 'YA' jika benar jalan rusak, atau 'TIDAK' jika itu selfie, foto orang, atau hal lain yang bukan jalan rusak. Sertakan alasan singkat jika TIDAK.";
 
     const result = await model.generateContent([

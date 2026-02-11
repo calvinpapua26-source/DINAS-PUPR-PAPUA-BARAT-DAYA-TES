@@ -1,6 +1,4 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+/* Basic Styles */
 
 :root {
   --pupr-blue: #1e3a8a;
@@ -28,13 +26,16 @@ body {
 ::-webkit-scrollbar {
   width: 8px;
 }
+
 ::-webkit-scrollbar-track {
   background: #f1f1f1;
 }
+
 ::-webkit-scrollbar-thumb {
   background: #1e3a8a;
   border-radius: 10px;
 }
+
 ::-webkit-scrollbar-thumb:hover {
   background: #1e40af;
 }
