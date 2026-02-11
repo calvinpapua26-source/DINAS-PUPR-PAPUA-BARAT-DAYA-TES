@@ -32,3 +32,4 @@ extracted_data/
 .vercel
 
 .vercel
+.env*.local
