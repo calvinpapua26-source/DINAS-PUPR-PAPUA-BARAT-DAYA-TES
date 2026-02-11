@@ -2,6 +2,7 @@ import React, { useState, useMemo } from 'react';
 import { useNavigate } from 'react-router-dom';
 import MapComponent from './MapComponent';
 import RoadBridgeMatrix from './RoadBridgeMatrix';
+import { sendBlazwaMessage } from '../services/whatsappService';
 
 const AksesJalan: React.FC = () => {
     const navigate = useNavigate();
@@ -140,6 +141,10 @@ const AksesJalan: React.FC = () => {
 
         const encodedMessage = encodeURIComponent(message);
         const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
+
+        sendBlazwaMessage(phoneNumber, message).then(res => {
+            if (res.status) console.log('BlazWA: Notifikasi formulir terkirim');
+        });
 
         window.open(whatsappUrl, '_blank');
 

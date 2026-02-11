@@ -2,6 +2,7 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { chatWithGemini, analyzeRoadImage } from '../services/geminiService';
 import { checkJurisdiction } from '../services/verificationService';
+import { sendBlazwaMessage } from '../services/whatsappService';
 
 interface Message {
   role: 'user' | 'ai' | 'admin';
@@ -232,6 +233,12 @@ const GeminiChat: React.FC = () => {
         text: adminText
       }]);
     }, 1500);
+
+    // Send automated WhatsApp notification (BlazWA Integration)
+    const waResponse = await sendBlazwaMessage(phoneNumber, message);
+    if (waResponse.status) {
+      console.log('BlazWA: Notifikasi otomatis berhasil dikirim');
+    }
 
     window.open(whatsappUrl, '_blank');
 
