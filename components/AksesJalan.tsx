@@ -1,5 +1,5 @@
-import React, { useState, useMemo } from 'react';
-import { useNavigate } from 'react-router-dom';
+import React, { useState, useMemo, useEffect } from 'react';
+import { useNavigate, useLocation } from 'react-router-dom';
 import MapComponent from './MapComponent';
 import RoadBridgeMatrix from './RoadBridgeMatrix';
 import { sendBlazwaMessage } from '../services/whatsappService';
@@ -21,6 +21,28 @@ const AksesJalan: React.FC = () => {
 
     // State for Collapsible Matrix
     const [showMatrix, setShowMatrix] = useState(false);
+
+    const location = useLocation();
+
+    // 0. Handle URL parameters for automatic verification zoom
+    useEffect(() => {
+        const query = new URLSearchParams(location.search);
+        const lat = query.get('lat');
+        const lng = query.get('lng');
+
+        if (lat && lng) {
+            const numLat = parseFloat(lat);
+            const numLng = parseFloat(lng);
+            if (!isNaN(numLat) && !isNaN(numLng)) {
+                setVisitorMarker([numLat, numLng]);
+                setMapConfig({
+                    center: [numLat, numLng],
+                    zoom: 16
+                });
+                alert('Menampilkan lokasi verifikasi aduan...');
+            }
+        }
+    }, [location.search]);
 
     const roadStats = [
         { type: 'Jalan Nasional', length: '245 km', condition: 'Baik: 78%', color: 'bg-blue-600' },
