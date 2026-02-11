@@ -12,7 +12,7 @@ const Navbar: React.FC = () => {
     { label: 'Profil', href: '#profil' },
     { label: 'Program Kerja', href: '#projects' },
     { label: 'Berita', href: '#news' },
-    { label: 'Kontak', href: '#kontak' },
+    { label: 'Sistem Internal', path: '/admin-anti-gravity', icon: 'fa-shield-halved' },
   ];
 
   return (
@@ -42,9 +42,10 @@ const Navbar: React.FC = () => {
                 <Link
                   key={item.label}
                   to={item.path}
-                  className={`font-semibold transition-colors duration-200 ${location.pathname === item.path ? 'text-blue-900' : 'text-gray-700 hover:text-blue-900'
+                  className={`font-semibold transition-colors duration-200 flex items-center ${location.pathname === item.path ? 'text-blue-900' : 'text-gray-700 hover:text-blue-900'
                     }`}
                 >
+                  {(item as any).icon && <i className={`fas ${(item as any).icon} mr-1.5 text-xs text-blue-600`}></i>}
                   {item.label}
                 </Link>
               ) : (

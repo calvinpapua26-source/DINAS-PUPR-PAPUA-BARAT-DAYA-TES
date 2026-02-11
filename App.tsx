@@ -12,6 +12,7 @@ import AksesJalan from './components/AksesJalan';
 import DataSpasial from './components/DataSpasial';
 import SPM from './components/SPM';
 import PertekAir from './components/PertekAir';
+import AdminAntiGravity from './components/AdminAntiGravity';
 import { MOCK_NEWS } from './constants';
 
 const HomePage: React.FC = () => (
@@ -183,6 +184,7 @@ const App: React.FC = () => {
           <Route path="/akses-jalan" element={<AksesJalan />} />
           <Route path="/data-spasial" element={<DataSpasial />} />
           <Route path="/pertek-air" element={<PertekAir />} />
+          <Route path="/admin-anti-gravity" element={<AdminAntiGravity />} />
           <Route path="/spm" element={<SPM />} />
           <Route path="*" element={<Navigate to="/" replace />} />
         </Routes>
