@@ -492,7 +492,7 @@ const AksesJalan: React.FC = () => {
                                     </div>
                                     <div className="flex items-center space-x-2">
                                         <i className="fab fa-whatsapp text-green-600"></i>
-                                        <span className="text-gray-700">0822-9323-4424</span>
+                                        <span className="text-gray-700">0821-9893-3685</span>
                                     </div>
                                 </div>
                             </div>

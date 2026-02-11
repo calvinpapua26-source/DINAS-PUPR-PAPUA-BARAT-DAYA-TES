@@ -350,9 +350,12 @@ const InfoTataRuang: React.FC = () => {
                             <p className="text-blue-100 mb-4">
                                 Jam operasional: <strong>Senin - Jumat (08.00 - 16.00 WIT)</strong>
                             </p>
-                            <button className="bg-green-500 hover:bg-green-400 text-white px-6 py-3 rounded-xl font-bold w-full transition-all active:scale-95 shadow-lg">
+                            <button
+                                onClick={() => window.open('https://wa.me/6282198933685', '_blank')}
+                                className="bg-green-500 hover:bg-green-400 text-white px-6 py-3 rounded-xl font-bold w-full transition-all active:scale-95 shadow-lg"
+                            >
                                 <i className="fab fa-whatsapp mr-2"></i>
-                                Klik untuk Chat: 0812-XXXX-XXXX
+                                Klik untuk Chat: 0821-9893-3685
                             </button>
                         </div>
 
