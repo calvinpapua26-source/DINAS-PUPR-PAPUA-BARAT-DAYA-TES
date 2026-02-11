@@ -131,7 +131,7 @@ const AksesJalan: React.FC = () => {
     const handleReportSubmit = (e: React.FormEvent) => {
         e.preventDefault();
 
-        const phoneNumber = '6282293234424';
+        const phoneNumber = '6282198933685';
         const message = `Halo Dinas PUPR Papua Barat Daya, saya ingin melaporkan jalan rusak.
         
 *Lokasi:* ${reportForm.location}
