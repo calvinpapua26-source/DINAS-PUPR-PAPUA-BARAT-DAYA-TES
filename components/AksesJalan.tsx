@@ -45,7 +45,7 @@ const AksesJalan: React.FC = () => {
     }, [location.search]);
 
     const roadStats = [
-        { type: 'Jalan Nasional', length: '245 km', condition: 'Baik: 78%', color: 'bg-blue-600' },
+        { type: 'Jalan Nasional', length: '245 km', condition: 'Baik: 78%', color: 'bg-amber-500' },
         { type: 'Jalan Provinsi', length: '432 km', condition: 'Baik: 65%', color: 'bg-yellow-600' },
         { type: 'Jalan Kabupaten/Kota', length: '1,234 km', condition: 'Baik: 52%', color: 'bg-green-600' },
     ];
@@ -94,7 +94,7 @@ const AksesJalan: React.FC = () => {
     };
 
     const gisLayers = useMemo(() => [
-        { url: '/data/jalan nasional.json', name: 'Jalan Nasional', color: '#2563eb', weight: 4 },
+        { url: '/data/jalan nasional.json', name: 'Jalan Nasional', color: '#f59e0b', weight: 5 },
         { url: '/data/jlnprov.json', name: 'Jalan Provinsi', color: '#ea580c', weight: 3 },
         { url: '/data/jembatan nasional.json', name: 'Jembatan Nasional', color: '#b91c1c', weight: 6 },
     ], []);
@@ -288,14 +288,14 @@ const AksesJalan: React.FC = () => {
                                         <div key={layer.name} className="space-y-2">
                                             <label
                                                 className={`flex items-center p-3 rounded-xl border transition-all cursor-pointer ${activeLayers[layer.name]
-                                                    ? 'bg-blue-50 border-blue-200 text-blue-900 shadow-sm'
+                                                    ? 'bg-amber-50 border-amber-200 text-amber-900 shadow-sm'
                                                     : 'bg-white border-transparent text-gray-600 hover:border-gray-200'
                                                     }`}
                                             >
                                                 <div className="relative flex items-center justify-center w-6 h-6 mr-3">
                                                     <input
                                                         type="checkbox"
-                                                        className="w-5 h-5 rounded border-gray-300 text-blue-600 focus:ring-blue-500 cursor-pointer"
+                                                        className="w-5 h-5 rounded border-gray-300 text-amber-600 focus:ring-amber-500 cursor-pointer"
                                                         checked={!!activeLayers[layer.name]}
                                                         onChange={() => toggleLayer(layer.name)}
                                                     />
@@ -310,7 +310,7 @@ const AksesJalan: React.FC = () => {
                                                 <div className="px-3 pb-2 animate-in fade-in slide-in-from-top-1 duration-200">
                                                     <div className="flex justify-between items-center mb-1">
                                                         <span className="text-[10px] font-bold text-gray-500 uppercase tracking-tighter">Transparansi</span>
-                                                        <span className="text-[10px] font-black text-blue-600">{Math.round((layerOpacities[layer.name] ?? 0.8) * 100)}%</span>
+                                                        <span className="text-[10px] font-black text-amber-600">{Math.round((layerOpacities[layer.name] ?? 0.8) * 100)}%</span>
                                                     </div>
                                                     <input
                                                         type="range"
@@ -319,7 +319,7 @@ const AksesJalan: React.FC = () => {
                                                         step="0.1"
                                                         value={layerOpacities[layer.name] ?? 0.8}
                                                         onChange={(e) => handleOpacityChange(layer.name, parseFloat(e.target.value))}
-                                                        className="w-full h-1.5 bg-gray-200 rounded-lg appearance-none cursor-pointer accent-blue-600"
+                                                        className="w-full h-1.5 bg-gray-200 rounded-lg appearance-none cursor-pointer accent-amber-600"
                                                     />
                                                 </div>
                                             )}
@@ -354,7 +354,7 @@ const AksesJalan: React.FC = () => {
                         </h3>
                         <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
                             <div className="flex items-center space-x-3">
-                                <div className="w-10 h-1.5 bg-blue-600 rounded"></div>
+                                <div className="w-10 h-1.5 bg-amber-500 rounded"></div>
                                 <span className="text-sm font-semibold text-gray-700">Jalan Nasional</span>
                             </div>
                             <div className="flex items-center space-x-3">

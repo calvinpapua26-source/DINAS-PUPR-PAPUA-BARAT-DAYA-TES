@@ -147,9 +147,9 @@ const RoadBridgeMatrix: React.FC = () => {
                                     <td className="px-6 py-4">
                                         <div className="font-bold text-gray-900 group-hover:text-blue-700 transition-colors">{item.name}</div>
                                         <div className="text-[10px] mt-1">
-                                            <span className={`px-2 py-0.5 rounded-full font-black uppercase ${item.type === 'Jalan Nasional' ? 'bg-blue-100 text-blue-700' :
-                                                    item.type === 'Jalan Provinsi' ? 'bg-orange-100 text-orange-700' :
-                                                        'bg-red-100 text-red-700'
+                                            <span className={`px-2 py-0.5 rounded-full font-black uppercase ${item.type === 'Jalan Nasional' ? 'bg-amber-100 text-amber-700' :
+                                                item.type === 'Jalan Provinsi' ? 'bg-orange-100 text-orange-700' :
+                                                    'bg-red-100 text-red-700'
                                                 }`}>
                                                 {item.type}
                                             </span>
@@ -159,8 +159,8 @@ const RoadBridgeMatrix: React.FC = () => {
                                     <td className="px-6 py-4 text-gray-600 text-sm">{item.dimensions}</td>
                                     <td className="px-6 py-4">
                                         <span className={`px-3 py-1 rounded-lg text-xs font-bold ${item.condition.toLowerCase().includes('baik') ? 'bg-green-100 text-green-700' :
-                                                item.condition.toLowerCase().includes('rusak') ? 'bg-red-100 text-red-700' :
-                                                    'bg-yellow-100 text-yellow-700'
+                                            item.condition.toLowerCase().includes('rusak') ? 'bg-red-100 text-red-700' :
+                                                'bg-yellow-100 text-yellow-700'
                                             }`}>
                                             {item.condition}
                                         </span>
