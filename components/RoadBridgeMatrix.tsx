@@ -147,9 +147,9 @@ const RoadBridgeMatrix: React.FC = () => {
                                     <td className="px-6 py-4">
                                         <div className="font-bold text-gray-900 group-hover:text-blue-700 transition-colors">{item.name}</div>
                                         <div className="text-[10px] mt-1">
-                                            <span className={`px-2 py-0.5 rounded-full font-black uppercase ${item.type === 'Jalan Nasional' ? 'bg-amber-100 text-amber-700' :
-                                                item.type === 'Jalan Provinsi' ? 'bg-orange-100 text-orange-700' :
-                                                    'bg-red-100 text-red-700'
+                                            <span className={`px-2 py-0.5 rounded-full font-black uppercase ${item.type === 'Jalan Nasional' ? 'bg-blue-100 text-blue-700' :
+                                                item.type === 'Jalan Provinsi' ? 'bg-red-100 text-red-700' :
+                                                    'bg-purple-100 text-purple-700'
                                                 }`}>
                                                 {item.type}
                                             </span>
